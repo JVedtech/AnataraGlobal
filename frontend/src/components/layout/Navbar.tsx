@@ -78,22 +78,21 @@ export default function Navbar({ isAuthenticated: _isAuthenticated }: { isAuthen
           className="flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8"
           aria-label="Main navigation"
         >
-          <Link href="/" className="flex items-center gap-2.5 group shrink-0">
+          <Link href="/" className="flex items-center gap-2.5 group shrink-0" aria-label="Capvanta Home">
             <img
-              src="/image.png"
-              alt="Antara Global"
-              className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-110"
+              src="/logo-mark.png"
+              alt="Capvanta"
+              className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-105"
             />
             <div className="flex flex-col leading-none">
-              <span className="text-[17px] font-black tracking-tight transition-colors duration-300" style={{ color: '#000000' }}>
-                ANTARA{' '}
-                <span className="font-light" style={{ color: '#FD7C06' }}>GLOBAL</span>
+              <span className="text-[18px] font-black tracking-wider transition-colors duration-300" style={{ color: '#31274F' }}>
+                CAPVANTA
               </span>
               <span
-                className="hidden sm:block text-[9px] font-medium tracking-wider"
-                style={{ color: 'rgba(0,0,0,0.5)' }}
+                className="hidden sm:block text-[8.5px] font-medium tracking-wider"
+                style={{ color: 'rgba(49,39,79,0.7)' }}
               >
-                सर्वेषां वित्तज्ञानम्
+                By a founder, for founders
               </span>
             </div>
           </Link>
@@ -242,14 +241,18 @@ export default function Navbar({ isAuthenticated: _isAuthenticated }: { isAuthen
             <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: 'rgba(0,0,0,0.08)' }}>
               <Link href="/" onClick={closeMobile} className="flex items-center gap-2 group">
                 <img
-                  src="/image.png"
-                  alt="Antara Global"
-                  className="h-8 w-8 object-contain transition-transform duration-300 group-hover:scale-110"
+                  src="/logo-mark.png"
+                  alt="Capvanta"
+                  className="h-8 w-8 object-contain transition-transform duration-300 group-hover:scale-105"
                 />
-                <span className="text-base font-black tracking-tight" style={{ color: '#000000' }}>
-                  ANTARA{' '}
-                  <span className="font-light" style={{ color: '#FD7C06' }}>GLOBAL</span>
-                </span>
+                <div className="flex flex-col leading-none">
+                  <span className="text-base font-black tracking-wider" style={{ color: '#31274F' }}>
+                    CAPVANTA
+                  </span>
+                  <span className="text-[8px] font-medium tracking-wider" style={{ color: 'rgba(49,39,79,0.7)' }}>
+                    By a founder, for founders
+                  </span>
+                </div>
               </Link>
               <button
                 onClick={closeMobile}

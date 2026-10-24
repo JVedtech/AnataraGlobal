@@ -27,14 +27,18 @@ export default function AuthLayout({
         >
           <Link href="/" className="inline-flex items-center gap-2.5 group">
             <img
-              src="/image.png"
-              alt="Antara Global"
-              className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-110"
+              src="/logo-mark.png"
+              alt="Capvanta"
+              className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-105"
             />
-            <span className="text-xl font-black tracking-tight" style={{ color: '#000000' }}>
-              ANTARA{' '}
-              <span className="font-light" style={{ color: '#FD7C06' }}>GLOBAL</span>
-            </span>
+            <div className="flex flex-col items-start leading-none">
+              <span className="text-xl font-black tracking-wider" style={{ color: '#31274F' }}>
+                CAPVANTA
+              </span>
+              <span className="text-[9px] font-medium tracking-wider" style={{ color: 'rgba(49,39,79,0.7)' }}>
+                By a founder, for founders
+              </span>
+            </div>
           </Link>
         </motion.div>
 

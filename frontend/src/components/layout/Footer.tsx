@@ -28,16 +28,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 group">
+            <div className="flex items-center gap-3 group">
               <img
-                src="/image.png"
-                alt="Antara Global"
-                className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-110"
+                src="/logo-white.png"
+                alt="Capvanta"
+                className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
-              <span className="text-2xl font-bold tracking-tight" style={{ color: '#FFFFFF' }}>
-                ANTARA{' '}
-                <span className="font-light" style={{ color: '#FD7C06' }}>GLOBAL</span>
-              </span>
             </div>
             <p className="mt-4 text-sm leading-relaxed max-w-md" style={{ color: 'rgba(255,255,255,0.5)' }}>
               Strategic business advisory, venture readiness, and capital connectivity

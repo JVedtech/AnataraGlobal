@@ -132,7 +132,7 @@ export default function LoadingScreen({ children }: { children: ReactNode }) {
               <div className="relative overflow-hidden">
                 <img
                   src="/image.png"
-                  alt="ANTARA Global"
+                  alt="Capvanta"
                   className="h-auto w-[220px] sm:w-[260px] object-contain select-none"
                   draggable={false}
                 />

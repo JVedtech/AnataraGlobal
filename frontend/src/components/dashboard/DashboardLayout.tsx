@@ -9,7 +9,6 @@ import {
   ShieldCheck,
   Menu,
   X,
-  Sparkles,
   ChevronRight,
   LogOut,
   BarChart3,
@@ -92,11 +91,10 @@ export default function DashboardLayout({ children, navItems }: { children: Reac
         ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
         <div className="flex items-center justify-between h-16 px-6 border-b border-border-gray flex-shrink-0">
-          <Link href="/" className="flex items-center gap-2 group">
-            <Sparkles className="h-4.5 w-4.5 text-gold" />
-            <span className="text-base font-black tracking-tight text-deep-navy">
-              ANTARA{' '}
-              <span className="font-light text-gold">GLOBAL</span>
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <img src="/logo-mark.png" alt="Capvanta" className="h-7 w-7 object-contain" />
+            <span className="text-base font-black tracking-wider" style={{ color: '#31274F' }}>
+              CAPVANTA
             </span>
           </Link>
           <button
