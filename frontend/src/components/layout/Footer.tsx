@@ -84,7 +84,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm group" style={{ color: 'rgba(255,255,255,0.4)' }}>
                 <Mail className="h-4 w-4 mt-0.5 shrink-0 transition-colors" style={{ color: 'rgba(253,124,6,0.5)' }} />
-                <span className="transition-colors">hello@antaraglobal.com</span>
+                <span className="transition-colors">hello@capvanta.com</span>
               </li>
               <li className="flex items-start gap-3 text-sm group" style={{ color: 'rgba(255,255,255,0.4)' }}>
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0 transition-colors" style={{ color: 'rgba(253,124,6,0.5)' }} />
@@ -96,7 +96,7 @@ export default function Footer() {
 
         <div className="mt-14 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
           <p className="text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
-            &copy; {new Date().getFullYear()} Antara Global. All rights reserved.
+            &copy; {new Date().getFullYear()} Capvanta. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
             <a href="#" className="transition-all hover:underline" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#FD7C06'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>Privacy Policy</a>

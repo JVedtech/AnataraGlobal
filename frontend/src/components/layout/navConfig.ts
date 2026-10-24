@@ -11,6 +11,8 @@ export interface NavLink {
 export const navConfig: NavLink[] = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
+  { label: 'Blogs', href: '/blogs' },
+  { label: 'Knowledge Hub', href: '/knowledge' },
   { label: 'Target Audience', href: '/target-audience' },
   { label: 'Ecosystem', href: '/ecosystem' },
   { label: 'Why Us', href: '/differentiator' },

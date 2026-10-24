@@ -15,67 +15,147 @@ import {
   Lightbulb,
   LineChart,
   Network,
-  Rocket,
   ShieldCheck,
   Sparkles,
   Target,
   TrendingUp,
   Users,
+  Scale,
+  FileCheck,
+  UserPlus,
+  Layers,
 } from 'lucide-react'
 
-
-const ecosystemFlow = ['Business', 'Strategy', 'Readiness', 'Capital', 'Growth']
+const ecosystemFlow = ['Incorporation', 'Strategy & Legal', 'Valuation & Readiness', 'Capital & Mandates', 'Scale']
 
 const serviceCards = [
   {
     icon: Target,
-    title: 'Strategic Business Advisory',
-    eyebrow: 'Services Included',
-    desc: 'Helping organizations build strong foundations, improve decision-making, and create sustainable growth strategies.',
+    title: 'Strategic Business Advisory & Growth Planning',
+    eyebrow: 'Strategy & Foundation',
+    desc: 'Helping organizations build institutional-grade foundations, validate economic moats, and execute scalable market penetration strategies.',
     items: [
-      'Business Strategy',
-      'Growth Planning',
-      'Market Positioning',
-      'Business Transformation',
-      'Operational Excellence',
-      'Expansion Planning',
+      'Business Model Canvas & Validation',
+      'Go-To-Market (GTM) Strategy',
+      'Market Positioning & Competitive Moats',
+      'Operational Excellence & Scale Frameworks',
+      'Business Transformation Advisory',
+      'Expansion & International Scaling',
     ],
     accent: 'emerald',
+    highlight: 'Foundation for sustainable scaling.',
   },
   {
-    icon: Rocket,
-    title: 'Venture Readiness Advisory',
-    eyebrow: 'Services Included',
-    desc: 'Preparing businesses for funding opportunities and growth by improving their investment readiness and business structure.',
+    icon: Building2,
+    title: 'Company Registration & Corporate Structuring',
+    eyebrow: 'Incorporation & Compliance',
+    desc: 'End-to-end entity incorporation, regulatory licensing, and corporate governance architectures tailored for venture-backed companies.',
     items: [
-      'Business Diagnostics',
-      'Investment Readiness Assessment',
-      'Investor Preparedness',
-      'Pitch Deck Development',
-      'Financial Modelling',
-      'Due Diligence Preparation',
-      'Fundraising Strategy',
+      'Private Limited (Pvt Ltd) & LLP Registration',
+      'Delaware (US) C-Corp Flipping & Cross-Border Setup',
+      'DPIIT Startup India Recognition & Tax Exemptions',
+      'Secretarial & Statutory Corporate Setup',
+      'Regulatory Licensing & Banking Architecture',
+      'Founder Board & Governance Charters',
     ],
     accent: 'gold',
+    highlight: 'Clean, venture-ready corporate structure.',
+  },
+  {
+    icon: Scale,
+    title: 'Legal & Equity Advisory',
+    eyebrow: 'Equity & Contracts',
+    desc: 'Engineering equitable capitalization tables, founder vesting frameworks, and protecting governance rights across every financing round.',
+    items: [
+      'Cap Table Structuring & Dilution Simulation',
+      'Founder Vesting & Reverse Vesting Agreements',
+      'ESOP Pool Formulation & Plan Administration',
+      'Term Sheet, SHA, SSA & SAFE Note Advisory',
+      'IP Assignment & Non-Disclosure Frameworks',
+      'Minority Protection & Voting Rights Advisory',
+    ],
+    accent: 'emerald',
+    highlight: 'Zero cap table conflict guarantee.',
+  },
+  {
+    icon: LineChart,
+    title: 'Startup Valuation & Financial Modeling',
+    eyebrow: 'Valuation & Modeling',
+    desc: 'Institutional valuation defensibility combining early-stage heuristics with growth-stage discounted cash flow (DCF) and market multiples.',
+    items: [
+      'Pre-Revenue & Seed Valuation (Berkus, Scorecard, VC Method)',
+      'Growth-Stage DCF & Precedent Transaction Multiples',
+      'Dynamic 3-to-5 Year Integrated Financial Projections',
+      'Unit Economics, CAC/LTV & Payback Period Modeling',
+      'Burn Multiple, Runway & Cash Flow Sensitivity Analysis',
+      'Audit-Ready Valuation Certificates & Reports',
+    ],
+    accent: 'gold',
+    highlight: 'Institutional valuation defensibility.',
+  },
+  {
+    icon: FileCheck,
+    title: 'Due Diligence & Audit Preparedness',
+    eyebrow: 'Audit Readiness',
+    desc: 'Preparing founders for ruthless institutional investor scrutinies through rigorous pre-due diligence audits and organized data rooms.',
+    items: [
+      'Virtual Data Room (VDR) Architecture & Management',
+      'Comprehensive Financial, Legal, Tax & IP Diligence',
+      'Cap Table, Employment & Contract Pre-Audit',
+      'Pre-Investment Red Flag Identification & Remediation',
+      'Compliance & Statutory Regulatory Audit Readiness',
+      'Fast-Track 48-Hour Diligence Query Resolution Support',
+    ],
+    accent: 'emerald',
+    highlight: '10x faster investor due diligence closing.',
+  },
+  {
+    icon: UserPlus,
+    title: 'Co-Founder Search & Executive Leadership Matching',
+    eyebrow: 'Talent & Team Alignment',
+    desc: 'Pairing visionary founders with complementary co-founders and strategic C-suite executives to build unstoppable leadership squads.',
+    items: [
+      'Technical, Commercial & Operational Co-Founder Search',
+      'Founder Personality & Complementary Skill Assessment',
+      'Founder-to-Founder Equity Split & Vesting Frameworks',
+      'Advisory Board Formulation & Expert Matching',
+      'Fractional C-Suite Leadership (CFO, CTO, CMO)',
+      'Leadership Retention & Incentive Structuring',
+    ],
+    accent: 'gold',
+    highlight: 'Complementary talent for exponential execution.',
   },
   {
     icon: CircleDollarSign,
-    title: 'Fundraising Support & Capital Connectivity',
-    eyebrow: 'Support Areas',
-    desc: 'Supporting businesses throughout their fundraising journey by helping them prepare, position, and connect with relevant capital ecosystem participants.',
+    title: 'Fundraising Support & Funding Mandate Services',
+    eyebrow: 'Capital Sourcing',
+    desc: 'Dedicated fundraising representation from pitch narrative formulation to exclusive round syndication and term sheet closing.',
     items: [
-      'Fundraising Strategy',
-      'Capital Planning',
-      'Investor Readiness Assessment',
-      'Pitch Deck Support',
-      'Financial Projections',
-      'Data Room Preparation',
-      'Investor Communication Support',
-      'Fundraising Process Coordination',
-      'Strategic Introductions',
+      'Institutional Pitch Deck & One-Page Teaser Crafting',
+      'Exclusive Funding Mandate Advisory & Round Leadership',
+      'Targeted Investor Syndicate Roadshow Coordination',
+      'Live Pitch Coaching & Mock Partner Diligence',
+      'Term Sheet Negotiation & Valuation Defense',
+      'Transaction Closing Coordination & Escrow Facilitation',
     ],
     accent: 'emerald',
-    highlight: 'Preparation before capital connection.',
+    highlight: 'End-to-end deal mandate execution.',
+  },
+  {
+    icon: Handshake,
+    title: 'Venture Partner Opportunities & Capital Ecosystem',
+    eyebrow: 'Venture Network',
+    desc: 'Unlocking deep capital networks, venture partner scout alliances, and multi-tier institutional relationships across the globe.',
+    items: [
+      'Venture Partner Scout Alliances & Co-Investment Deals',
+      'Direct Introductions to 150+ VCs & Family Offices',
+      'Angel Syndicate & High-Net-Worth Network Access',
+      'Venture Debt, NBFC & Non-Dilutive Capital Access',
+      'Cross-Border Capital Pathways & Strategic Corporate LP Funds',
+      'Post-Funding Governance & Follow-on Round Support',
+    ],
+    accent: 'gold',
+    highlight: '$80M+ capital connectivity network.',
   },
 ]
 
@@ -88,51 +168,53 @@ const capitalNetwork = [
   { icon: Target, label: 'Strategic Investors' },
   { icon: ShieldCheck, label: 'Corporate Investors' },
   { icon: Landmark, label: 'Institutional Investors' },
-  { icon: Briefcase, label: 'NBFCs' },
+  { icon: Briefcase, label: 'NBFCs & Debt Funds' },
   { icon: Building2, label: 'Lending Institutions' },
   { icon: Globe, label: 'Alternative Funding Platforms' },
+  { icon: Layers, label: 'Venture Scouts & Partners' },
 ]
 
 const msmeServices = [
-  'Growth Strategy',
-  'Financial Preparedness',
-  'Debt Readiness Support',
-  'Business Diagnostics',
-  'Compliance Awareness',
-  'Government Scheme Awareness',
-  'Capacity Building',
+  'Growth Strategy & Financial Preparedness',
+  'Company Incorporation & Entity Restructuring',
+  'Startup Valuation & Financial Modeling',
+  'Legal & Equity Advisory (Cap Table & ESOPs)',
+  'Due Diligence & Data Room Organization',
+  'Co-Founder & Executive Search',
+  'Funding Mandate Services & Roadshow Prep',
+  'Venture Partner & Institutional Capital Sourcing',
 ]
 
 const knowledgePrograms = [
-  { icon: Lightbulb, label: 'Workshops' },
-  { icon: BookOpen, label: 'Webinars' },
-  { icon: Users, label: 'Founder Bootcamps' },
-  { icon: Globe, label: 'Industry Sessions' },
-  { icon: GraduationCap, label: 'Expert Panels' },
-  { icon: FileText, label: 'Business Knowledge Resources' },
-  { icon: Sparkles, label: 'Financial Literacy Initiatives' },
+  { icon: Lightbulb, label: 'Founder Growth Bootcamps' },
+  { icon: BookOpen, label: 'Fundraising Playbook Masterclasses' },
+  { icon: Users, label: 'Co-Founder Matching Mixers' },
+  { icon: Globe, label: 'Startup Valuation Webinars' },
+  { icon: GraduationCap, label: 'Legal & Equity Advisory Clinics' },
+  { icon: FileText, label: 'Due Diligence VDR Frameworks' },
+  { icon: Sparkles, label: 'Venture Partner Pitch Days' },
 ]
 
 const partnerCategories = [
   {
     icon: FileText,
-    title: 'Financial Experts',
-    items: ['Chartered Accountants', 'Financial Professionals'],
+    title: 'Financial & Valuation Experts',
+    items: ['Chartered Accountants', 'Certified Valuation Analysts', 'Financial Modelers'],
   },
   {
     icon: ShieldCheck,
-    title: 'Legal & Compliance',
-    items: ['Company Secretaries', 'Legal Advisors'],
+    title: 'Legal, Incorporation & Equity',
+    items: ['Venture Attorneys', 'Company Secretaries', 'Cap Table Specialists'],
   },
   {
     icon: TrendingUp,
-    title: 'Growth Partners',
-    items: ['Industry Experts', 'Mentors', 'Consultants'],
+    title: 'Growth & Talent Partners',
+    items: ['Co-Founder Matchmakers', 'Fractional C-Suite', 'Industry Mentors'],
   },
   {
     icon: Handshake,
-    title: 'Ecosystem Partners',
-    items: ['Venture Networks', 'Incubators', 'Accelerators', 'Institutional Partners'],
+    title: 'Venture & Capital Partners',
+    items: ['Venture Capital Funds', 'Family Offices', 'Angel Syndicates', 'Debt Funds'],
   },
 ]
 
@@ -150,29 +232,27 @@ export default function Services() {
               className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold border text-white" style={{ backgroundColor: '#000000', borderColor: '#000000' }}
             >
               <Sparkles className="h-3.5 w-3.5" />
-              Premium Ecosystem Services
+              Comprehensive Founder Services
             </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="mt-6 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
-              style={{ color: 'var(--color-accent)' }}
+              style={{ color: '#31274F' }}
             >
-              <span style={{ color: 'var(--color-accent)' }}>Strategic Guidance.</span><br />
-              <span style={{ color: 'var(--color-accent)' }}>Capital Readiness.</span><br />
-              <span style={{ color: 'var(--color-accent)' }}>Sustainable Growth.</span>
+              <span>Strategic Advisory.</span><br />
+              <span>Capital Readiness.</span><br />
+              <span className="text-[#FD7C06]">Exponential Scale.</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="mt-6 max-w-xl text-base leading-relaxed sm:text-lg"
-              style={{ color: 'rgba(0,0,0,0.6)' }}
+              style={{ color: 'rgba(0,0,0,0.65)' }}
             >
-              Antara Global helps businesses strengthen their foundations, prepare for opportunities,
-              connect with relevant ecosystems, and build scalable growth through strategy, knowledge,
-              partnerships, and capital connectivity.
+              Capvanta empowers high-growth founders and businesses from company registration and startup valuation to equity structuring, co-founder search, due diligence, and exclusive funding mandates.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -189,11 +269,11 @@ export default function Services() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
-                href="/ecosystem"
+                href="/knowledge"
                 className="inline-flex items-center gap-2.5 rounded-xl px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105"
-                style={{ backgroundColor: '#000000' }}
+                style={{ backgroundColor: '#31274F' }}
               >
-                Explore Our Ecosystem
+                Explore Knowledge Hub
               </Link>
             </motion.div>
           </div>
@@ -209,23 +289,23 @@ export default function Services() {
                 <div className="mb-6 flex items-center justify-between gap-4">
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-widest" style={{ color: 'rgba(0,0,0,0.5)' }}>Ecosystem Flow</p>
-                    <h2 className="mt-1 text-xl font-extrabold" style={{ color: 'var(--color-accent)' }}>From foundation to growth</h2>
+                    <h2 className="mt-1 text-xl font-extrabold" style={{ color: '#31274F' }}>From foundation to funding</h2>
                   </div>
-                  <Network className="h-8 w-8" style={{ color: 'var(--color-accent)' }} />
+                  <Network className="h-8 w-8" style={{ color: '#31274F' }} />
                 </div>
                 <div className="space-y-3">
                   {ecosystemFlow.map((item, index) => (
                     <div key={item} className="grid grid-cols-[2.5rem_1fr] items-center gap-3">
                       <div className="relative flex justify-center">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-xs font-black border z-10" style={{ color: 'var(--color-accent)', borderColor: 'rgba(0,0,0,0.15)' }}>
-                          {String(index + 1).padStart(2, '0')}
+                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-xs font-black border z-10" style={{ color: '#31274F', borderColor: 'rgba(0,0,0,0.15)' }}>
+                          0{index + 1}
                         </div>
                         {index < ecosystemFlow.length - 1 && (
-                          <span className="absolute top-10 w-0.5" style={{ height: '44px', backgroundColor: 'var(--color-accent)' }} />
+                          <div className="absolute top-10 h-6 w-0.5 bg-black/10" />
                         )}
                       </div>
-                      <div className="rounded-xl px-4 py-3 border" style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(0,0,0,0.15)' }}>
-                        <span className="text-sm font-bold" style={{ color: 'rgba(0,0,0,0.6)' }}>{item}</span>
+                      <div className="rounded-xl border p-3 font-semibold text-sm" style={{ backgroundColor: '#FFF8F2', borderColor: 'rgba(0,0,0,0.08)', color: '#000000' }}>
+                        {item}
                       </div>
                     </div>
                   ))}
@@ -236,6 +316,7 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Services Grid Section */}
       <section className="relative overflow-hidden py-24 lg:py-32" style={{ backgroundColor: '#FFF8F2' }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -244,13 +325,12 @@ export default function Services() {
             viewport={{ once: true }}
             className="mx-auto mb-16 max-w-3xl text-center"
           >
-            <span className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold border text-white" style={{ backgroundColor: '#000000', borderColor: '#000000' }}>What We Do</span>
-            <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl" style={{ color: 'var(--color-accent)' }}>
-              Structured support for every growth inflection point
+            <span className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold border text-white" style={{ backgroundColor: '#000000', borderColor: '#000000' }}>Full Service Directory</span>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl" style={{ color: '#31274F' }}>
+              Integrated Advisory For The Entire Founder Lifecycle
             </h2>
             <p className="mt-4 text-base leading-relaxed" style={{ color: 'rgba(0,0,0,0.6)' }}>
-              We support startups, MSMEs, entrepreneurs, and growth-stage businesses through structured
-              advisory services, funding readiness support, ecosystem connections, and growth-focused solutions.
+              We eliminate execution friction across legal incorporation, startup valuation, equity advisory, co-founder recruitment, due diligence readiness, and funding mandates.
             </p>
           </motion.div>
 
@@ -264,36 +344,36 @@ export default function Services() {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.08 }}
+                  transition={{ delay: index * 0.05 }}
                   className="group relative overflow-hidden rounded-3xl border shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl" style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(0,0,0,0.1)' }}
                 >
-                  <div className="absolute left-0 top-0 h-full w-1.5" style={{ backgroundColor: 'var(--color-accent)' }} />
+                  <div className="absolute left-0 top-0 h-full w-1.5" style={{ backgroundColor: '#31274F' }} />
                   <div className="grid gap-0 lg:grid-cols-[0.9fr_1.35fr]">
                     <div className="relative border-b p-7 lg:border-b-0 lg:border-r lg:p-9" style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(0,0,0,0.1)' }}>
-                      <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border" style={{ backgroundColor: 'var(--color-accent)', borderColor: 'var(--color-accent)' }}>
+                      <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border" style={{ backgroundColor: '#31274F', borderColor: '#31274F' }}>
                         <Icon className="h-7 w-7 text-white" />
                       </div>
-                      <span className="text-xs font-semibold uppercase tracking-widest text-black">
+                      <span className="text-xs font-semibold uppercase tracking-widest text-[#FD7C06]">
                         {card.eyebrow}
                       </span>
-                      <h3 className="mt-3 text-2xl font-extrabold tracking-tight" style={{ color: 'var(--color-accent)' }}>
+                      <h3 className="mt-3 text-2xl font-extrabold tracking-tight" style={{ color: '#31274F' }}>
                         {card.title}
                       </h3>
-                      <p className="mt-4 text-sm leading-relaxed text-black/60">
+                      <p className="mt-4 text-sm leading-relaxed text-black/65">
                         {card.desc}
                       </p>
                       {card.highlight && (
-                        <div className="mt-6 rounded-2xl border px-4 py-3 text-sm font-extrabold" style={{ backgroundColor: 'rgba(0,128,129,0.08)', borderColor: 'rgba(0,128,129,0.2)', color: '#000000' }}>
-                          {card.highlight}
+                        <div className="mt-6 rounded-2xl border px-4 py-3 text-xs font-bold" style={{ backgroundColor: 'rgba(49,39,79,0.06)', borderColor: 'rgba(49,39,79,0.15)', color: '#31274F' }}>
+                          ✓ {card.highlight}
                         </div>
                       )}
                     </div>
 
-                    <div className="p-7 lg:p-9">
+                    <div className="p-7 lg:p-9 flex flex-col justify-center">
                       <div className="grid gap-3 sm:grid-cols-2">
                         {card.items.map((item) => (
-                          <div key={item} className="flex items-center gap-3 rounded-2xl border px-4 py-3 text-sm font-semibold" style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(0,0,0,0.1)', color: '#000000' }}>
-                            <CheckCircle2 className="h-4 w-4 shrink-0" style={{ color: 'var(--color-accent)' }} />
+                          <div key={item} className="flex items-start gap-3 rounded-2xl border px-4 py-3 text-sm font-semibold" style={{ backgroundColor: '#FFF8F2', borderColor: 'rgba(0,0,0,0.08)', color: '#000000' }}>
+                            <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5" style={{ color: '#31274F' }} />
                             <span>{item}</span>
                           </div>
                         ))}
@@ -307,8 +387,8 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Capital Connectivity Section */}
       <section className="relative overflow-hidden py-24 lg:py-32" style={{ backgroundColor: '#FFF8F2' }}>
-
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
             <motion.div
@@ -317,18 +397,15 @@ export default function Services() {
               viewport={{ once: true }}
             >
               <span className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold border text-white" style={{ backgroundColor: '#000000', borderColor: '#000000' }}>Capital Ecosystem Access</span>
-              <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl" style={{ color: 'var(--color-accent)' }}>
-                Connecting Businesses With Opportunities
+              <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl" style={{ color: '#31274F' }}>
+                Connecting High-Potential Ventures With Global Capital
               </h2>
-              <p className="mt-4 text-base leading-relaxed" style={{ color: 'rgba(0,0,0,0.6)' }}>
-                Through our ecosystem network and partnerships, businesses may gain access to relevant
-                capital providers and strategic stakeholders.
+              <p className="mt-4 text-base leading-relaxed" style={{ color: 'rgba(0,0,0,0.65)' }}>
+                Through exclusive funding mandates and venture partner alliances, Capvanta connects investment-ready startups with top-tier venture capital, family offices, and strategic angel networks.
               </p>
-              <div className="mt-8 rounded-2xl border p-5" style={{ backgroundColor: 'rgba(0,128,129,0.06)', borderColor: 'rgba(0,128,129,0.2)' }}>
-                <p className="text-xs leading-relaxed text-black/60">
-                  <strong className="text-black">Disclaimer:</strong> Antara Global does not guarantee funding,
-                  investments, loans, or capital commitments. Our role is to assist businesses in becoming
-                  funding-ready, investment-ready, and strategically connected with relevant ecosystem participants.
+              <div className="mt-8 rounded-2xl border p-5" style={{ backgroundColor: 'rgba(49,39,79,0.05)', borderColor: 'rgba(49,39,79,0.15)' }}>
+                <p className="text-xs leading-relaxed text-black/70">
+                  <strong className="text-black">Regulatory Transparency:</strong> Capvanta acts as a strategic venture advisory and readiness accelerator. We support founders in becoming audit-proof, investment-ready, and directly introduced to appropriate ecosystem participants.
                 </p>
               </div>
             </motion.div>
@@ -340,12 +417,10 @@ export default function Services() {
               className="relative"
             >
               <div className="relative mx-auto max-w-2xl rounded-3xl border-2 p-5 shadow-xl sm:p-8 lg:flex lg:min-h-[560px] lg:items-center lg:justify-center" style={{ backgroundColor: '#FFFFFF', borderColor: '#000000' }}>
-                <div className="absolute inset-8 hidden rounded-full border border-dashed lg:block" style={{ borderColor: 'var(--color-accent)', opacity: 0.3 }} />
-                <div className="absolute inset-20 hidden rounded-full border border-dashed lg:block" style={{ borderColor: 'var(--color-accent-hover)', opacity: 0.2 }} />
-                <div className="relative z-10 mx-auto flex h-40 w-40 flex-col items-center justify-center rounded-full border-2 text-center shadow-2xl" style={{ backgroundColor: 'var(--color-accent)', borderColor: 'var(--color-accent-hover)' }}>
-                  <Sparkles className="mb-2 h-6 w-6 text-white/80" />
-                  <span className="text-sm font-black tracking-tight text-white">ANTARA</span>
-                  <span className="text-sm font-light text-white/70">GLOBAL</span>
+                <div className="absolute inset-8 hidden rounded-full border border-dashed lg:block" style={{ borderColor: '#31274F', opacity: 0.3 }} />
+                <div className="absolute inset-20 hidden rounded-full border border-dashed lg:block" style={{ borderColor: '#FD7C06', opacity: 0.2 }} />
+                <div className="relative z-10 mx-auto flex h-40 w-40 flex-col items-center justify-center rounded-full border-2 text-center shadow-2xl" style={{ backgroundColor: '#31274F', borderColor: '#31274F' }}>
+                  <img src="/logo-white.png" alt="Capvanta" className="h-14 w-auto object-contain" />
                 </div>
 
                 <div className="relative z-10 mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:absolute lg:inset-8 lg:mt-0 lg:content-between">
@@ -355,8 +430,8 @@ export default function Services() {
 
                     return (
                       <div key={item.label} className={`flex ${alignRight ? 'lg:justify-end' : 'lg:justify-start'}`}>
-                        <div className="flex max-w-[11rem] items-center gap-2 rounded-2xl border px-3 py-2 text-xs font-semibold shadow-md" style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(0,0,0,0.1)', color: '#000000' }}>
-                          <Icon className="h-3.5 w-3.5 shrink-0" style={{ color: 'var(--color-accent)' }} />
+                        <div className="flex max-w-[11.5rem] items-center gap-2 rounded-2xl border px-3 py-2 text-xs font-semibold shadow-md" style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(0,0,0,0.1)', color: '#000000' }}>
+                          <Icon className="h-3.5 w-3.5 shrink-0" style={{ color: '#31274F' }} />
                           <span>{item.label}</span>
                         </div>
                       </div>
@@ -369,6 +444,7 @@ export default function Services() {
         </div>
       </section>
 
+      {/* MSME & Knowledge Section */}
       <section className="relative overflow-hidden py-24 lg:py-32" style={{ backgroundColor: '#FFF8F2' }}>
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <motion.article
@@ -377,20 +453,20 @@ export default function Services() {
             viewport={{ once: true }}
             className="rounded-3xl border p-7 shadow-xl sm:p-9" style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(0,0,0,0.12)' }}
           >
-            <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold text-white" style={{ backgroundColor: '#000000' }}>Services Included</span>
+            <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold text-white" style={{ backgroundColor: '#000000' }}>Tailored Solutions</span>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight flex items-center gap-3" style={{ color: '#000000' }}>
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl border" style={{ backgroundColor: 'var(--color-accent)', borderColor: 'var(--color-accent)' }}>
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl border" style={{ backgroundColor: '#31274F', borderColor: '#31274F' }}>
                 <Building2 className="h-5 w-5 text-white" />
               </div>
-              MSME Growth Advisory
+              MSME & Growth Advisory
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-black/60">
-              Helping MSMEs strengthen their business foundations, improve readiness, and build sustainable growth systems.
+              Assisting traditional businesses and growth enterprises to achieve venture readiness, debt optimization, and governance excellence.
             </p>
             <div className="mt-7 grid gap-3 sm:grid-cols-2">
               {msmeServices.map((item) => (
                 <div key={item} className="flex items-center gap-3 rounded-2xl border px-4 py-3 text-sm font-semibold" style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(0,0,0,0.1)', color: '#000000' }}>
-                  <CheckCircle2 className="h-4 w-4 shrink-0" style={{ color: 'var(--color-accent)' }} />
+                  <CheckCircle2 className="h-4 w-4 shrink-0" style={{ color: '#31274F' }} />
                   {item}
                 </div>
               ))}
@@ -405,17 +481,16 @@ export default function Services() {
             className="rounded-3xl border p-7 shadow-xl sm:p-9" style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(0,0,0,0.12)' }}
           >
             <div className="relative">
-              <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold text-white" style={{ backgroundColor: '#000000' }}>Knowledge & Awareness Initiatives</span>
+              <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold text-white" style={{ backgroundColor: '#000000' }}>Knowledge & Awareness</span>
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight flex items-center gap-3" style={{ color: '#000000' }}>
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl border" style={{ backgroundColor: 'var(--color-accent)', borderColor: 'var(--color-accent)' }}>
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl border" style={{ backgroundColor: '#31274F', borderColor: '#31274F' }}>
                   <BookOpen className="h-5 w-5 text-white" />
                 </div>
-                Financial Knowledge For Everyone
+                Knowledge Hub & Masterclasses
               </h2>
-              <p className="mt-2 text-sm font-semibold" style={{ color: 'rgba(0,0,0,0.6)' }}>सर्वेषां वित्तज्ञानम्</p>
+              <p className="mt-2 text-sm font-semibold text-[#FD7C06]">By a founder, for founders</p>
               <p className="mt-5 max-w-2xl text-sm leading-relaxed text-black/60">
-                Antara Global promotes business and financial awareness by empowering entrepreneurs with
-                knowledge, resources, and practical learning opportunities.
+                Capvanta democratizes startup finance, valuation methods, and deal mechanics through interactive blogs, founder bootcamps, and executive roundtables.
               </p>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {knowledgePrograms.map((program) => {
@@ -423,7 +498,7 @@ export default function Services() {
 
                   return (
                     <div key={program.label} className="flex items-center gap-3 rounded-2xl border px-4 py-3 text-sm font-semibold" style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(0,0,0,0.1)', color: '#000000' }}>
-                      <ProgramIcon className="h-4 w-4 shrink-0" style={{ color: 'var(--color-accent)' }} />
+                      <ProgramIcon className="h-4 w-4 shrink-0" style={{ color: '#31274F' }} />
                       {program.label}
                     </div>
                   )
@@ -434,6 +509,7 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Strategic Partners Network */}
       <section className="relative overflow-hidden py-24 lg:py-32" style={{ backgroundColor: '#FFF8F2' }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -443,11 +519,11 @@ export default function Services() {
             className="mx-auto mb-16 max-w-3xl text-center"
           >
             <span className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold text-white" style={{ backgroundColor: '#000000' }}>Strategic Partnership Network</span>
-            <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl" style={{ color: 'var(--color-accent)' }}>
-              Building A Strong Business Ecosystem
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl" style={{ color: '#31274F' }}>
+              Uniting Top Legal, Financial & Venture Experts
             </h2>
             <p className="mt-4 text-base leading-relaxed text-black/60">
-              Antara Global collaborates with professionals and organizations that help businesses grow stronger.
+              Capvanta collaborates with premier specialists to deliver comprehensive support across every critical growth pillar.
             </p>
           </motion.div>
 
@@ -464,15 +540,15 @@ export default function Services() {
                   transition={{ delay: index * 0.08 }}
                   className="group relative overflow-hidden rounded-3xl border p-7 shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl" style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(0,0,0,0.12)' }}
                 >
-                  <div className="absolute left-0 top-0 h-1 w-full" style={{ backgroundColor: 'var(--color-accent)' }} />
-                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border" style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(0,0,0,0.12)', color: 'var(--color-accent)' }}>
+                  <div className="absolute left-0 top-0 h-1 w-full" style={{ backgroundColor: '#31274F' }} />
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border" style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(0,0,0,0.12)', color: '#31274F' }}>
                     <CategoryIcon className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-extrabold" style={{ color: '#000000' }}>{category.title}</h3>
                   <ul className="mt-5 space-y-3 border-t pt-5" style={{ borderColor: 'rgba(0,0,0,0.1)' }}>
                     {category.items.map((item) => (
                       <li key={item} className="flex items-center gap-2 text-sm font-medium" style={{ color: 'rgba(0,0,0,0.6)' }}>
-                        <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: 'var(--color-accent)' }} />
+                        <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: '#31274F' }} />
                         {item}
                       </li>
                     ))}

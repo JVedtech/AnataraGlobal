@@ -10,6 +10,7 @@ import Ecosystem from './pages/Ecosystem'
 import Differentiator from './pages/Differentiator'
 import CoreValues from './pages/CoreValues'
 import KnowledgeHub from './pages/KnowledgeHub'
+import Blogs from './pages/Blogs'
 import Contact from './pages/Contact'
 import ContactSection from './components/about/ContactSection'
 import Login from './pages/auth/Login'
@@ -379,6 +380,8 @@ export default function App() {
             <Route path="/differentiator" component={Differentiator} />
             <Route path="/core-values" component={CoreValues} />
             <Route path="/knowledge" component={KnowledgeHub} />
+            <Route path="/blogs" component={Blogs} />
+            <Route path="/knowledge/blogs" component={Blogs} />
             <Route path="/contact" component={Contact} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />

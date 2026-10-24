@@ -2,60 +2,77 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { 
   Building2, LineChart, Briefcase, CheckCircle2, 
-  ArrowRight, ShieldCheck, Sparkles
+  ArrowRight, Sparkles, Scale
 } from 'lucide-react'
 
 const services = [
   {
     id: 'advisory',
     icon: Building2,
-    title: 'Business Advisory',
-    subtitle: 'Strategic Foundation & Scaling',
-    description: 'We work closely with founders to refine their business model, optimize operations, and build a sustainable strategy for scale.',
+    title: 'Advisory & Incorporation',
+    subtitle: 'Company Registration & Strategy',
+    description: 'From company registration and DPIIT recognition to business model refinement and co-founder search, we build unshakeable foundations for ambitious founders.',
     benefits: [
-      'Business Model Canvas & Validation',
-      'Go-To-Market (GTM) Strategy',
-      'Operational Efficiency Consulting',
-      'Corporate Governance Frameworks',
+      'Company Registration (Pvt Ltd, LLP, Delaware/C-Corp)',
+      'Co-Founder Search & Executive Matching',
+      'Go-To-Market (GTM) & Market Positioning',
+      'Corporate Governance & Operational Strategy',
     ],
-    metric: '45%',
-    metricLabel: 'Average Efficiency Gain',
+    metric: '100%',
+    metricLabel: 'Statutory Compliance',
     primaryColor: 'var(--color-accent)',
     primaryFaded: 'rgba(0,128,129,0.15)',
   },
   {
-    id: 'readiness',
+    id: 'valuation',
     icon: LineChart,
-    title: 'Venture Readiness',
-    subtitle: 'Preparing for the Spotlight',
-    description: 'We structure your financial models, pitch narratives, and legal frameworks to meet the expectations of sophisticated investors.',
+    title: 'Valuation & Readiness',
+    subtitle: 'Startup Valuation & Modeling',
+    description: 'We calculate precise startup valuations (DCF, VC Method, Scorecard) and build institutional-grade 3-to-5 year financial models that withstand investor scrutiny.',
     benefits: [
-      'Professional Pitch Deck Creation',
-      'Dynamic Financial Modeling (3-5 Year)',
-      'Data Room Setup & Due Diligence Prep',
-      'Valuation Advisory & Deal Structuring',
+      'Startup Valuation (Pre & Post-Money Methodologies)',
+      'Dynamic 3-to-5 Year Integrated Financial Projections',
+      'Professional Pitch Deck & Investor Teaser',
+      'Unit Economics, CAC/LTV & Runway Optimization',
     ],
     metric: '10x',
-    metricLabel: 'Faster Due Diligence',
+    metricLabel: 'Faster Investor Review',
     primaryColor: 'var(--color-accent-light)',
     primaryFaded: 'rgba(51,181,181,0.15)',
   },
   {
-    id: 'connectivity',
-    icon: Briefcase,
-    title: 'Capital Connectivity',
-    subtitle: 'Unlocking Global Capital',
-    description: 'We connect growth-ready and investment-ready businesses with institutional investors, venture capitals, and angel networks.',
+    id: 'legal',
+    icon: Scale,
+    title: 'Legal & Due Diligence',
+    subtitle: 'Equity, ESOPs & Audit Prep',
+    description: 'We structure clean cap tables, design motivating ESOP pools, review shareholder agreements (SHA/SSA), and execute comprehensive investor due diligence readiness.',
     benefits: [
-      'Targeted Investor Matchmaking',
-      'Warm Introductions to VC & Angels',
-      'Roadshow Preparation & Pitch Coaching',
-      'Post-Funding Strategic Guidance',
+      'Legal & Equity Advisory (Cap Table & Vesting)',
+      'ESOP Pool Formulation & Allocation Policies',
+      'Virtual Data Room (VDR) & Diligence Prep',
+      'Term Sheet, SAFE & SHA/SSA Contract Advisory',
+    ],
+    metric: '0',
+    metricLabel: 'Diligence Red Flags',
+    primaryColor: 'var(--color-accent)',
+    primaryFaded: 'rgba(0,128,129,0.15)',
+  },
+  {
+    id: 'fundraising',
+    icon: Briefcase,
+    title: 'Fundraising & Mandates',
+    subtitle: 'Mandate Services & Venture Partners',
+    description: 'We support businesses across their entire fundraising journey with exclusive funding mandates, venture partner alliances, and direct access to institutional capital.',
+    benefits: [
+      'Full-Lifecycle Fundraising Support & Roadshows',
+      'Exclusive Funding Mandate Services',
+      'Venture Partner Opportunities & Sourcing',
+      'Warm Introductions to VC, Angels & Family Offices',
     ],
     metric: '$80M+',
     metricLabel: 'Capital Network Access',
-    primaryColor: 'var(--color-accent)',
-    primaryFaded: 'rgba(0,128,129,0.15)',
+    primaryColor: 'var(--color-accent-light)',
+    primaryFaded: 'rgba(51,181,181,0.15)',
   },
 ]
 
@@ -85,7 +102,7 @@ export default function ServicesSection() {
             style={{ backgroundColor: 'rgba(51,181,181,0.08)', borderColor: 'rgba(51,181,181,0.2)', color: 'var(--color-accent-light)' }}
           >
             <Sparkles className="h-3.5 w-3.5" />
-            Our Offerings
+            Comprehensive Advisory Suite
           </motion.div>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -105,7 +122,7 @@ export default function ServicesSection() {
             className="mt-4 text-base leading-relaxed"
             style={{ color: 'rgba(255,255,255,0.55)' }}
           >
-            We bridge the gap between structure, strategy, and capital to elevate startups and MSMEs.
+            From company registration and startup valuation to legal advisory, diligence readiness, and exclusive fundraising mandates.
           </motion.p>
         </div>
 
@@ -168,64 +185,59 @@ export default function ServicesSection() {
                 className="h-full rounded-3xl border bg-white/[0.03] backdrop-blur-md p-8 sm:p-12 flex flex-col justify-between relative overflow-hidden"
                 style={{ borderColor: 'rgba(255,255,255,0.1)' }}
               >
-                {/* Glow Backdrop */}
-                <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full blur-3xl opacity-[0.08] pointer-events-none"
-                  style={{ backgroundColor: currentService.primaryColor }} />
+                {/* Background glow specific to card */}
+                <div 
+                  className="absolute -right-20 -top-20 w-80 h-80 rounded-full blur-3xl opacity-20 pointer-events-none"
+                  style={{ backgroundColor: currentService.primaryColor }}
+                />
 
                 <div>
-                  <div className="flex items-center justify-between gap-4 flex-wrap">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div 
+                      className="p-3 rounded-xl border flex items-center justify-center"
+                      style={{ 
+                        backgroundColor: currentService.primaryFaded,
+                        borderColor: currentService.primaryColor,
+                        color: currentService.primaryColor 
+                      }}
+                    >
+                      <IconComponent className="h-6 w-6" />
+                    </div>
                     <div>
-                      <span className="text-xs font-semibold tracking-wider uppercase"
-                        style={{ color: currentService.primaryColor }}>
+                      <span className="text-xs font-bold tracking-widest uppercase" style={{ color: currentService.primaryColor }}>
                         {currentService.subtitle}
                       </span>
-                      <h3 className="text-3xl font-bold mt-2 flex items-center gap-3" style={{ color: '#FFFFFF' }}>
-                        <IconComponent className="h-8 w-8" style={{ color: currentService.primaryColor }} />
+                      <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-1">
                         {currentService.title}
                       </h3>
                     </div>
-
-                    <div className="flex flex-col items-end border rounded-2xl px-5 py-3 shadow-inner"
-                      style={{ backgroundColor: 'rgba(255,255,255,0.05)', borderColor: 'rgba(255,255,255,0.1)' }}>
-                      <span className="text-3xl font-extrabold" style={{ color: currentService.primaryColor }}>
-                        {currentService.metric}
-                      </span>
-                      <span className="text-[10px] uppercase tracking-wider mt-0.5" style={{ color: 'rgba(255,255,255,0.4)' }}>{currentService.metricLabel}</span>
-                    </div>
                   </div>
 
-                  <p className="mt-6 text-base leading-relaxed max-w-2xl" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                  <p className="text-base sm:text-lg leading-relaxed text-white/70 mb-8 max-w-xl">
                     {currentService.description}
                   </p>
 
-                  <div className="mt-8 pt-8" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-                    <h4 className="text-sm font-semibold uppercase tracking-wider mb-5" style={{ color: 'rgba(255,255,255,0.5)' }}>
-                      Key Deliverables & Outcomes
-                    </h4>
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      {currentService.benefits.map((benefit, i) => (
-                        <div key={i} className="flex items-start gap-3 group">
-                          <CheckCircle2 className="h-5 w-5 shrink-0 mt-0.5" style={{ color: currentService.primaryColor }} />
-                          <span className="text-sm transition-colors" style={{ color: 'rgba(255,255,255,0.8)' }}>{benefit}</span>
-                        </div>
-                      ))}
-                    </div>
+                  <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                    {currentService.benefits.map((benefit, i) => (
+                      <div key={i} className="flex items-start gap-3 bg-white/[0.02] border border-white/5 p-4 rounded-xl">
+                        <CheckCircle2 className="h-5 w-5 shrink-0 mt-0.5" style={{ color: currentService.primaryColor }} />
+                        <span className="text-sm font-medium text-white/90">{benefit}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                <div className="mt-10 pt-6 flex flex-wrap items-center justify-between gap-6" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-                  <div className="flex items-center gap-2 text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>
-                    <ShieldCheck className="h-4 w-4" style={{ color: currentService.primaryColor }} />
-                    <span>Structured, NDA-protected advisory</span>
+                <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                  <div className="flex items-baseline gap-3">
+                    <span className="text-3xl sm:text-4xl font-black text-white">{currentService.metric}</span>
+                    <span className="text-xs uppercase tracking-wider font-semibold text-white/50">{currentService.metricLabel}</span>
                   </div>
+
                   <a
-                    href="#consultation"
-                    className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold text-white hover:scale-105 transition-all duration-300 shadow-lg"
-                    style={{ backgroundColor: currentService.primaryColor }}
-                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#000000'}
-                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = currentService.primaryColor}
+                    href="/contact"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm bg-white text-black transition-all duration-300 hover:scale-105 hover:bg-white/90"
                   >
-                    Get Started with {currentService.title}
+                    <span>Request Service Consultation</span>
                     <ArrowRight className="h-4 w-4" />
                   </a>
                 </div>
